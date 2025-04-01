@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    height: 150vh;
+    width: 100vw;
+    border: 2px solid black;
+
+}
+
+:root {
+    --gray: gray;
+    --bg-color: #f0efe7;
+    --blue: #009099;
+    --font-color: #4e443c;
+    --orange: #f14e32;
+
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    gap: 25rem;
+
+}
+
+.left-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-desc {
+    color: --var(gray);
+    color: gray;
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+.right-navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid gray;
+    border-radius: 100px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.search-input {
+    height: 2.4rem;
+    width: 23rem;
+
+
+}
+
+.search-input input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.logo {
+    height: 5rem;
+    width: 10rem;
+    border: none;
+}
+
+.logo a,
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.search-icon {
+    height: 100%;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: gray;
+}
+
+.dark {
+    height: 4rem;
+    width: auto;
+    overflow: hidden;
+}
+
+.dark img {
+    height: 100%;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    background-image: url("/assets/image/isometric-grid@2x.png");
+    background-position: center;
+    height: 30rem;
+    width: 100%;
+
+
+}
+
+.contain-center {
+    display: flex;
+    width: 1024px;
+    margin: 0px auto;
+    height: 100%;
+    position: relative;
+
+}
+
+.left-container {
+    width: 60%;
+    padding: 3rem 0rem;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+.left-container p {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: var(--font-color);
+}
+
+.right-contiainer {
+    width: 40%;
+    position: relative;
+}
+
+.right-contiainer-img {
+    background-image: url("assets/image/branching-illustration@2x.png");
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.link-color {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+
+
+.frontend-navigation {
+    display: flex;
+    background-color: var(--bg-color);
+}
+
+.frontend-left-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 67%;
+    padding: 3rem 1rem;
+}
+
+.nav-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 32rem;
+}
+
+.nav-image {
+    height: 8rem;
+    width: 11rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nav-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.desc-heading {
+    color: var(--orange);
+}
+
+.nav-description {
+    color: var(--font-color);
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    word-spacing: 0.4rem;
+    padding: 0;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.nav-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+
+}
+
+.desc-heading {
+    font-size: 2rem;
+}
+
+/* ads section */
+.ads {
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ads-image {
+    height: 8rem;
+    width: 9.8rem;
+}
+
+.ads-desc p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+/* window making *************...........................************************ */
+
+.frontend-right-navigation {
+    width: 33%;
+    padding: 3rem 1rem;
+
+}
+
+.window {
+    height: 20rem;
+    width: 28rem;
+    background-image: url("/assets/image/monitor-windows.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lt {
+    font-family: sans-serif;
+    font-size: 1.9rem;
+    color: white;
+}
+
+.D-btn {
+
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid #02686f;
+    font-size: 1.9rem;
+    width: 22rem;
+}
+
+.version {
+    color: white;
+    font-size: 3rem;
+}
+
+.rel a {
+    color: white;
+}
+
+.window-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wind-box-row {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.wind-box-item {
+
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    gap: 1rem;
+
+}
+
+.wind-box-item-img {
+    height: 3rem;
+    width: 3rem;
+    overflow: hidden;
+}
+
+.wind-box-item-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.wind-box-item-description p a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.hr-bottom {
+    bottom: 0;
+    width: 1024px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.footer-section {
+    height: fit-content;
+    background-color: var(--bg-color);
+}
+
+.footer-section .contain-center {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+}
+
+.footer-section .contain-center h2 {
+    text-align: center;
+    font-size: large;
+    margin: 2.4rem 0px;
+
+}
+
+.footer-section .contain-center ul {
+    display: flex;
+    padding: 1rem 0rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-section .contain-center ul li {
+    list-style: none;
+    height: 6.5rem;
+    width: auto;
+}
+
+.footer-section .contain-center ul li img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.foo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    position: relative;
+
+}
+
+.heading {
+    position: relative;
+    padding-left: 10px;
+}
+
+.heading ::before {
+    position: absolute;
+    content: "</>";
+    left: -4rem;
+    top: 0rem;
+    font-size: 3rem;
+    color: gray;
+}
+
+.Gray-color {
+    color: gray;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
+
+.right-foo {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
