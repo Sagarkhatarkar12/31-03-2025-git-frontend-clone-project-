@@ -155,21 +155,16 @@
             background-image: url("/assets/image/isometric-grid@2x.png");
             background-position: center;
             height: 30rem;
-            /* display: flex; */
-            /* justify-content: center;
-            align-content: center; */
             width: 100%;
-            /* background-color: red; */
-            /* background-repeat: no-repeat; */
+           
 
         }
 
         .contain-center {
             display: flex;
-            /* background-color: blue; */
-            width: 938px;
+            width: 970px;
             margin: 0px auto;
-            /* flex-direction: column; */
+            
             height: 100%;
             position: relative;
 
@@ -461,12 +456,31 @@
         .foo {
             display: flex;
             justify-content: space-between;
-            padding: 2rem 0px;
-        }
+            padding: 2rem 4rem;
+            position: relative;
 
-        .heading p {
+        }
+        .heading {
+            position: relative;
+            padding-left: 10px;
+        }
+        .heading ::before{
+            position: absolute;
+            content: "</>";
+            left: -4rem;
+        top: 0rem;
+        /* font-family: monospace; */
+        /* left: 0.1rem; */
+            font-size: 3rem;
+            color:gray;
+        }
+.Gray-color{
+color: gray;
+}
+        p {
             font-family: sans-serif;
             font-size: 1.3rem;
+            /* letter-spacing: 0.1rem; */
         }
 
         .right-foo {
@@ -474,12 +488,7 @@
             font-size: 1.3rem;
         }
 
-        /* div{
-    outline: 2px solid red;
-}
-p{
-    outline: 2px solid blue;
-} */
+    
     </style>
 
 </head>
@@ -531,7 +540,7 @@ p{
                     <div class="right-contiainer-img">
                         <img src="/assets/image/branching-illustration@2x.png" alt="">
                     </div>
-                    .
+                    
                 </div>
             </div>
         </section>
@@ -675,13 +684,13 @@ p{
                 <hr>
                 <footer class="foo">
                     <div class="left-foo">
-                        <p class="heading">
-                        <p>About this site <br> Patches, suggestions, and comments are welcome.</p>
+               
+                        <p class="heading">About this site <br> <span class="Gray-color"> Patches, suggestions, and comments are welcome. </span></p>
 
-                        </p>
+                     
                     </div>
                     <div class="right-foo">
-                        <p>Git is a member of Software Freedom Conservancy</p>
+                        <p> <span class="Gray-color"> Git is a member  </span> of Software Freedom Conservancy</p>
                     </div>
 
                 </footer>
