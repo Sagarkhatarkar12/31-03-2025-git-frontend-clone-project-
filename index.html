@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="n">
+<html lang="n" class="light">
 
 <head>
 
@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body >
     <div class="container">
         <header>
             <div class="contain-center">
-            <nav class="navigation-bar">
+            <nav class="navigation-bar ">
                 <ul class="left-navigation">
                     <li class="logo">
-                        <a href="" class="links"><img src="/assets/image/logo@2x.png" alt=""></a>
+                        <a href="" class="links"><img id="logo" src="/assets/image/logo@2x.png" alt=""></a>
                     </li>
                     <h2 class="logo-desc"> --local-branching-on-the-cheap</li>
                     </h2>
@@ -34,13 +34,13 @@
                             <input type="search" placeholder="Type / to search entire site..." name="" id="search">
                         </div>
                     </form>
-                    <div class="dark"><img src="/assets/image/dark-mode.svg" alt=""></div>
+                    <div id="darkMode" class="dark"><i class="ri-moon-fill"></i></div>
                 </ul>
             </nav>
         </div>
         </header>
         <section class="main-container">
-         
+         <div class="main-container-bg"></div>
             <div class="contain-center">
                 <div class="left-container">
                     <p class="text-line">
@@ -137,6 +137,7 @@
                         <p class="rel"><a href="">Release Notes (2025-03-14)</a></p>
                         <buttton class="D-btn">Download for Windows</buttton>
                     </div>
+
                     <div class="window-box">
                         <div class="wind-box-row">
                             <div class="wind-box-item">
@@ -147,6 +148,7 @@
                                     <p><a href="" class="link-color">Windows GUIs</a></p>
                                 </div>
                             </div>
+
                             <div class="wind-box-item">
                                 <div class="wind-box-item-img">
                                     <img src="/assets/image/box.png" alt="">
@@ -156,6 +158,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="wind-box-row">
                             <div class="wind-box-item">
                                 <div class="wind-box-item-img">
@@ -165,6 +168,7 @@
                                     <p><a href="" class="link-color">Mac Bulid</a></p>
                                 </div>
                             </div>
+                            
                             <div class="wind-box-item">
                                 <div class="wind-box-item-img">
                                     <img src="/assets/image/source-code.png" alt="">
@@ -220,6 +224,52 @@
             </div>
         </section>
     </div>
+    <script>
+    //    dark mode 
+    let html = document.querySelector('html');
+
+        let dark_mode = document.querySelector('#darkMode');
+        let header = document.querySelector("header")
+        const main_container = document.querySelector(".main-container-bg");
+// const beforeElement = window.getComputedStyle(element, "::before").getPropertyValue("content");
+
+// console.log(beforeElement);
+        let navigation_bar = document.querySelector(".navigation-bar");
+        let theam = document.querySelector('body').className;
+        let img = document.querySelector("#logo")
+        console.log(theam)
+    dark_mode.addEventListener("click",toggleDarkMode);
+
+
+
+   function toggleDarkMode(){
+    let theam = html.className ;
+    if(theam == "light"){
+        html.className = "dark"
+        dark_mode.childNodes[0].className = "ri-sun-fill"
+        main_container.style.filter ="brightness(.4) contrast(1.6)";
+     
+        // navigation_bar.style.backgroundColor = "var(--dark-mode)"
+        // header.style.backgroundColor = "var(--dark-mode)"
+        img.src = "/assets/image/dark-mode.svg"
+        
+        
+        
+         
+    }
+    else{
+            html.className = "light"
+   dark_mode.childNodes[0].className = "ri-moon-fill"
+   main_container.style.filter ="brightness(1) contrast(1)";
+
+    //  navigation_bar.style.backgroundColor = "var(--bg-color)"
+    //  header.style.backgroundColor = "var(--bg-color)"
+      img.src = "/assets/image/logo@2x.png"
+    }
+    }
+
+    </script>
+
 </body>
 
 </html>
